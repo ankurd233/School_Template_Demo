@@ -1,0 +1,61 @@
+    .meet_our_team {
+        @include cmn_pdding();
+
+        .cmn_hdr {
+
+            text-align: center;
+        }
+
+        .team_otr {
+
+            margin-top: 7rem;
+            @include flex_btwn_algn_center;
+
+
+            .team_inr {
+                width: 31%;
+                background-color: #eeeeee;
+
+                .img_otr {
+                    height: 47.7rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .cmn_hdr {
+                    padding: 2rem 0;
+                }
+
+                .scl_icns {
+                    padding: 2rem 0;
+                    @include flex_btwn_algn_center;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    a {
+                        width: 4rem;
+                        height: 4rem;
+                        font-size: 2rem;
+                        background-color: #666666;
+                        @include flex_btwn_algn_center;
+                        justify-content: center;
+                        color: $color_Wht;
+                        border: 0.1rem solid #666666;
+                        transition: 0.9s all;
+
+
+                        &:hover {
+                            color: $color_Light_blue;
+                            background-color: $color_Wht;
+                            transform: rotate(720deg);
+                            border-color: $color_Light_blue;
+
+                        }
+                    }
+                }
+            }
+        }
+    }

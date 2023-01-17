@@ -1,0 +1,143 @@
+.latest_news {
+    @include cmn_pdding(9rem, 0, 0, 0);
+    position: relative;
+    z-index: 0;
+}
+
+.cmn_hdr {
+    text-align: center;
+}
+
+.news_latest_swpr_otr {
+    width: 90%;
+    margin-inline: auto;
+
+    .nws_arrow_otr {
+        .swiper-button-next-2 {
+            padding: 1rem;
+            background-color: $Color_light_black;
+            width: fit-content;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -86px;
+            cursor: pointer;
+        }
+
+        .swiper-button-prev-2 {
+            padding: 1rem;
+            background-color: $Color_light_black;
+            width: fit-content;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -86px;
+            cursor: pointer;
+        }
+    }
+}
+
+.ltst_news_cntnt {
+
+    .img_otr {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover .ovrlay_otr {
+            top: 50%;
+        }
+
+
+        .img_inr {
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .ovrlay_otr {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            padding: 5rem;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: $transition;
+
+            &:after {
+                @extend %for_before_after;
+                inset: 0;
+                background-color: $color_Purple;
+                opacity: 0.5;
+                z-index: -1;
+            }
+        }
+
+        .cmn_hdr {
+            h5 {
+                color: $color_Wht;
+            }
+
+            p {
+                color: $color_Wht;
+            }
+        }
+
+        .cmnt_otr {
+            @include flex_btwn_algn_center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+
+            .cmnt_inr {
+
+                @include flex_btwn_algn_center;
+                justify-content: center;
+                gap: 1.2rem;
+
+                span {
+                    color: $color_Wht;
+                }
+
+                p {
+                    color: $color_Wht;
+                }
+            }
+        }
+
+        .ltst_nws_btn {
+            margin-top: 3rem;
+            text-align: center;
+
+            .cmn_btn {
+                color: $color_Orange;
+                background-color: $color_Wht;
+                border: 0.2rem solid $color_Orange;
+
+                &:hover {
+                    color: $color_Wht;
+                }
+
+                &::after {
+                    background-color: $color_Orange;
+                    border: $color_Orange;
+                }
+            }
+        }
+    }
+}
+
+.student_grp {
+    margin-top: 8rem;
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,145 @@
+footer.ftr_sec {
+    @include cmn_pdding(9rem, 0, 0, 0);
+
+    .ftr_otr {
+
+        padding: 5rem;
+        background-color: $color_Wht;
+        @include flex_btwn_algn_center;
+        align-items: baseline;
+        margin-top: 3.5rem;
+        position: relative;
+
+        &::after {
+            @extend %for_before_after;
+            background-image: url(../images/footer_shadow.png);
+            width: 100%;
+            height: 5.4rem;
+            left: 0;
+            bottom: -5.4rem;
+            background-size: 100% 100%;
+        }
+
+
+        .ftr_inr {
+            width: 25%;
+
+            .icn_otr {
+                width: 9rem;
+                height: 9rem;
+                border-radius: 50%;
+                background-color: $color_Orange;
+                border: 0.7rem solid $color_Wht;
+                display: grid;
+                place-items: center;
+                box-shadow: $box_shadow;
+                margin-inline: auto;
+                margin-top: -10rem;
+
+                svg {
+                    font-size: 3rem;
+                    color: $color_Wht;
+                }
+            }
+
+            .cntnt {
+                text-align: center;
+                margin-top: 2rem;
+
+                a {
+                    display: block;
+                    color: $color_black;
+                    margin: 0 0 1rem 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        color: $color_Orange;
+                    }
+                }
+
+                .scl-icns {
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: center;
+
+                    a {
+                        width: 4rem;
+                        height: 4rem;
+                        @include flex_btwn_algn_center;
+                        justify-content: center;
+                        background-color: $color_Purple;
+                        font-size: 1.8rem;
+                        color: $color_Wht;
+                        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                        transition: 0.5s ease;
+                        border: 0.2rem solid $color_Purple;
+
+                        &:hover {
+                            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
+                            background-color: transparent;
+                            color: $color_Purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ftr_btm {
+        margin-top: 5rem;
+
+        .lgo_otr {
+            img {
+                margin-inline: auto;
+            }
+        }
+
+        .ftr_nav_lst {
+            margin: 2.5rem 0;
+
+            ul {
+                @include flex_wd_gap;
+                justify-content: center;
+
+                li a {
+                    color: $color_black;
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+                    &:hover {
+                        color: $color_Orange;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+footer .cpyrght_txt {
+
+    background-color: $Color_light_black;
+    padding: 1rem;
+
+    h5 {
+        text-align: center;
+        font-size: 2rem;
+        color: $color_Wht;
+        text-transform: capitalize;
+
+        a {
+            color: $color_Wht;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer.ftr_sec .ftr_otr .ftr_inr .cntnt p {
+    line-height: 1.8;
+}

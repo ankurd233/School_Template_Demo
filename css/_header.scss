@@ -1,0 +1,119 @@
+header {
+
+    padding: 2.5rem 0 0 0;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @extend %for_before_after;
+        background: $color_Wht;
+        opacity: 0.8;
+        inset: 0;
+        z-index: -1;
+    }
+
+    .top_hdr_otr {
+        @include flex_btwn_algn_center;
+
+        .top_hdr_inr {
+
+            &:first-child {
+
+                a {
+                    margin-bottom: 1rem;
+                    @include flex_wd_gap;
+
+                    svg {
+                        color: $color_Light_blue;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                color: $color_black;
+                font-size: 1.8rem;
+
+                &:hover {
+                    color: $color_Light_blue;
+                }
+            }
+
+            ul {
+                @include flex_wd_gap;
+                margin-bottom: 1.5rem;
+
+                li {
+                    padding-right: 1.5rem;
+                    border-right: 0.1rem solid $Color_light_black;
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+
+            .srch_bx {
+                position: relative;
+
+                .search {
+                    padding: 1rem 5rem 1rem 1rem;
+                    width: 100%;
+                    font-size: 1.8rem;
+                    border: 0.1rem solid $color_black;
+                    border-radius: 0.5rem;
+
+                    &::placeholder {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .search_Submit {
+                    background: url(../images/search_icon.png) no-repeat;
+                    position: absolute;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    width: 21px;
+                    height: 18px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .hdr_outr {
+        padding: 2rem 0;
+        margin: 4rem 0 0 0;
+        background-color: $color_Orange;
+
+        ul {
+            @include flex_wd_gap;
+            justify-content: center;
+
+            a {
+                text-transform: uppercase;
+                color: $color_Wht;
+                font-weight: 700;
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0.2rem;
+                    background-color: $color_Wht;
+                    left: 0;
+                    bottom: -3px;
+                    transition: $transition;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}

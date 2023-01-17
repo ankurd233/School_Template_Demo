@@ -1,0 +1,84 @@
+.banner_sec {
+    position: relative;
+
+    @include cmn_pdding(9rem, 0, 0, 0);
+
+    .banner_swpr {
+
+        // box-shadow: $box_shadow_bottom;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background: url(../images/image_shadow.png);
+            width: 100%;
+            height: 5.5rem;
+            left: 0;
+            bottom: -5.5rem;
+            background-size: 100% 100%;
+        }
+
+        .swiper-pagination span {
+            width: 20px;
+            height: 20px;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: $color_Orange;
+        }
+
+
+        .swiper-button-next-1 {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            padding: 1rem;
+            background-color: #0006;
+            cursor: pointer;
+        }
+
+        .swiper-button-prev-1 {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            padding: 1rem;
+            background-color: #0006;
+            cursor: pointer;
+        }
+
+        .swiper-slide {
+
+            .img_otr {
+
+                .cntnt {
+
+                    width: 35%;
+                    height: 100%;
+                    background-color: $color_Wht;
+                    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 0% 50%);
+                    @include flex_btwn_algn_center;
+                    justify-content: center;
+                    flex-direction: column;
+                    row-gap: 2rem;
+                    padding: 6rem;
+
+                    h1 {
+                        font-size: 3.5rem;
+                        color: $color_Green;
+                        font-weight: 700;
+                        padding-bottom: 2.5rem;
+                    }
+
+                    .swpr_btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

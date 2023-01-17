@@ -1,0 +1,21 @@
+.phto_glry {
+
+    @include cmn_pdding(9rem, 0, 0, 0);
+    background-color: #f7f7f7;
+
+    .cmn_hdr.cntnt {
+        text-align: center;
+    }
+
+    .glry_otr {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+        margin-top: 8rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+    }
+}

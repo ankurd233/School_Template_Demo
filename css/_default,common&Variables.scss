@@ -1,0 +1,214 @@
+// Added Fonts 
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+// Variables
+
+$color_black: #000000;
+$Color_light_black: #666666;
+$color_overlay: #6256a39a;
+$color_Wht: #ffffff;
+$color_Orange: #fe6500;
+$color_Purple: #6156a3;
+$color_Green: #91c52e;
+$color_Light_blue: #1dade3;
+$openSans: 'Open Sans';
+$box_shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.24);
+$box_shadow_bottom: 0 2.5rem 2rem -1.5rem #111;
+$transition: 0.5s all;
+
+
+
+//Common Mixin and Extends
+
+@mixin cmn_pdding ($top: 9rem, $rght: 0, $btm: 9rem, $lft: 0) {
+    padding: $top $rght $btm $lft;
+}
+
+@mixin cmn_margin ($top: 2rem, $rght: 1rem, $btm: 1rem, $lft: 1rem) {
+    margin: $top $rght $btm $lft;
+}
+
+@mixin flex_btwn_algn_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex_wd_gap {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+%for_before_after {
+    content: "";
+    position: absolute;
+}
+
+// ---------------------------<><><><>---------------------------
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: $color_Orange;
+}
+
+/* scrollbar */
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 1.5rem;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $color_Orange;
+    border-radius: 1rem;
+    border: 0.3rem solid $color_Wht;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $openSans;
+    font-size: 1.8rem;
+    color: $color_black;
+    background-color: $color_Wht;
+
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input[type=submit],
+input[type=reset],
+a {
+    transition: $transition;
+    text-decoration: none;
+}
+
+::selection {
+    background: $color_Orange;
+    color: $color_Wht;
+}
+
+::-moz-selection {
+    background: $color_Orange;
+    color: $color_Wht;
+}
+
+*:focus {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    transition: $transition;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: normal;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 156rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cmn_hdr h2 {
+    font-size: 4.2rem;
+    color: $color_Purple;
+    line-height: 1.5;
+    font-family: $openSans;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        @extend %for_before_after;
+        width: 30%;
+        height: 0.7rem;
+        background-color: $color_Orange;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.cmn_hdr h5 {
+    font-size: 3rem;
+    color: $color_Purple;
+    line-height: 1.5;
+    font-family: $openSans;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cmn_btn {
+    font-size: 2rem;
+    color: $color_Wht;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    background-color: $color_Purple;
+    border: 0.2rem solid $color_Purple;
+    position: relative;
+    text-transform: capitalize;
+    transition: $transition;
+    z-index: 1;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    font-weight: 600;
+    vertical-align: middle;
+    text-align: center;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 100%;
+        background-color: $color_Wht;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: $transition;
+    }
+
+    &:hover {
+        color: $color_Purple;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}

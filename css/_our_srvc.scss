@@ -1,0 +1,42 @@
+.our_srvc {
+    @include cmn_pdding();
+
+    .cmn_hdr.cntnt {
+        text-align: center;
+    }
+
+    .srvc_otr {
+        margin-top: 10rem;
+        @include flex_btwn_algn_center;
+
+        .flx {
+            width: 31%;
+        }
+
+        .srvc_flx {
+            height: 20rem;
+            @include flex_btwn_algn_center;
+            box-shadow: $box_shadow;
+            margin-bottom: 7rem;
+
+            .img_otr {
+                background-color: $color_Orange;
+                padding: 1rem;
+                width: 25%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cmn_hdr {
+                width: 70%;
+                padding: 0 1rem;
+            }
+        }
+    }
+
+    .student_img img {
+        width: 100%;
+    }
+}

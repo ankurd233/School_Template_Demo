@@ -1,0 +1,61 @@
+.parents_sec {
+    @include cmn_pdding;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+
+    &:after {
+        @extend %for_before_after;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        opacity: 60%;
+        inset: 0;
+        z-index: -1;
+    }
+
+    .cmn_hdr {
+        text-align: center;
+
+        h2 {
+            color: $color_Wht;
+        }
+    }
+
+    .prnts_swpr_otr {
+
+        @include cmn_pdding;
+
+        .img_otr {
+            margin: 5rem 0;
+            width: 16rem;
+            height: 16rem;
+            margin-inline: auto;
+
+            img {
+                outline: 0.5rem solid $color_Orange;
+                border-radius: 50%;
+            }
+        }
+
+        .cmn_hdr p {
+            color: $color_Wht;
+            width: 50%;
+            line-height: 1.8;
+            margin-inline: auto;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet {
+            width: 2rem;
+            height: 2rem;
+            display: inline-block;
+            background-color: $color_Wht;
+        }
+
+        .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: $color_Orange;
+        }
+    }
+
+
+}
